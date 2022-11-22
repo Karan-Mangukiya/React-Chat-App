@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { arrayUnion, doc, serverTimestamp, setDoc, Timestamp, updateDoc } from "firebase/firestore";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/Authcontext";
@@ -6,8 +5,6 @@ import { ChatContext } from "../context/Chatcontext";
 import { v4 as uuid } from "uuid";
 import { db, storage } from "../firebase";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import { updateProfile } from "firebase/auth";
-import { Navigate } from "react-router-dom";
 
 const Input = () => {
   const { currentUser } = useContext(AuthContext);
